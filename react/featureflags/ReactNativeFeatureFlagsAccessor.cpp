@@ -17,7 +17,7 @@
  *   yarn featureflags --update
  */
 
-#include <React-featureflags/ReactNativeFeatureFlagsDefaults.h>
+#include "ReactNativeFeatureFlagsDefaults.h"
 #include <sstream>
 #include <stdexcept>
 #include <string>
