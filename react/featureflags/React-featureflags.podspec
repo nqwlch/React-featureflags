@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   s.author                 = "Meta Platforms, Inc. and affiliates"
   s.platforms              = { :ios => '15.1' } # min_supported_versions - 已替换为硬编码值
   s.source                 = source
-  s.source_files           = "*.{cpp,h}"
+  s.source_files           = "react/featureflags/*.{cpp,h}"
   s.compiler_flags         = folly_compiler_flags
   s.header_dir             = "react/featureflags"
   s.pod_target_xcconfig    = { "CLANG_CXX_LANGUAGE_STANDARD" => "c++20", # rct_cxx_language_standard() - 已替换为硬编码值
