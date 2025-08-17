@@ -32,8 +32,11 @@ Pod::Spec.new do |s|
   
   # 明确指定所有源文件
   s.source_files           = [
-    "*.cpp",
-    "*.h"
+    "ReactNativeFeatureFlags*.{cpp,h}",
+    "ReactNativeFeatureFlagsAccessor*.{cpp,h}",
+    "ReactNativeFeatureFlagsDefaults.h",
+    "ReactNativeFeatureFlagsDynamicProvider.h",
+    "ReactNativeFeatureFlagsProvider.h"
   ]
   
   # 指定公共头文件
