@@ -19,8 +19,8 @@
 
 #pragma once
 
-#include "ReactNativeFeatureFlagsAccessor.h"
-#include "ReactNativeFeatureFlagsProvider.h"
+#include  <React_featureflags/ReactNativeFeatureFlagsAccessor.h>
+#include  <React_featureflags/ReactNativeFeatureFlagsProvider.h>
 #include <memory>
 #include <optional>
 #include <string>

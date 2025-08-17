@@ -20,7 +20,7 @@
 #pragma once
 
 #include <folly/dynamic.h>
-#include "ReactNativeFeatureFlagsDefaults.h"
+#include  <React_featureflags/ReactNativeFeatureFlagsDefaults.h>
 
 namespace facebook::react {
 
