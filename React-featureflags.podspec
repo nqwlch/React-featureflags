@@ -39,8 +39,9 @@ Pod::Spec.new do |s|
   s.compiler_flags         = folly_compiler_flags
   s.header_dir             = "react/featureflags"
   s.pod_target_xcconfig    = { "CLANG_CXX_LANGUAGE_STANDARD" => "c++20", # rct_cxx_language_standard() - 已替换为硬编码值
-                               "HEADER_SEARCH_PATHS" => header_search_paths.join(' '),
-                               "DEFINES_MODULE" => "YES" }
+                               "HEADER_SEARCH_PATHS" => header_search_paths.join(' ')
+                               }
+  s.libraries = "stdc++"
 
   s.dependency "RCT-Folly", folly_version
 
