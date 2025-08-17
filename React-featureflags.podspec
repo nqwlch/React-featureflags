@@ -48,7 +48,7 @@ Pod::Spec.new do |s|
 
   # Framework 支持配置
   if ENV['USE_FRAMEWORKS']
-    s.module_name            = "React_featureflags"
+    s.module_name            = "react/featureflags"
     s.header_mappings_dir  = "react/featureflags"
   end
 end
