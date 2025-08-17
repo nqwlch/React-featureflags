@@ -19,7 +19,7 @@
 
 #pragma once
 
-#include <react/featureflags/ReactNativeFeatureFlagsProvider.h>
+#include "ReactNativeFeatureFlagsProvider.h"
 #include <array>
 #include <atomic>
 #include <memory>
