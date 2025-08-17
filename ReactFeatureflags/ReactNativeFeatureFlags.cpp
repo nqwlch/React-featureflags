@@ -17,7 +17,7 @@
  *   yarn featureflags --update
  */
 
-#include  <React_featureflags/ReactNativeFeatureFlags.h>
+#include  <ReactFeatureflags/ReactNativeFeatureFlags.h>
 
 namespace facebook::react {
 
