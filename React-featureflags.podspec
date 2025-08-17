@@ -31,22 +31,10 @@ Pod::Spec.new do |s|
   s.source                 = source
   
   # 明确指定所有源文件
-  s.source_files           = [
-    "ReactNativeFeatureFlags*.{cpp,h}",
-    "ReactNativeFeatureFlagsAccessor*.{cpp,h}",
-    "ReactNativeFeatureFlagsDefaults.h",
-    "ReactNativeFeatureFlagsDynamicProvider.h",
-    "ReactNativeFeatureFlagsProvider.h"
-  ]
+  s.source_files           = "react/featureflags/*.{h,hpp,cpp,mm}"
   
   # 指定公共头文件
-  s.public_header_files    = [
-    "ReactNativeFeatureFlags.h",
-    "ReactNativeFeatureFlagsAccessor.h",
-    "ReactNativeFeatureFlagsDefaults.h",
-    "ReactNativeFeatureFlagsDynamicProvider.h",
-    "ReactNativeFeatureFlagsProvider.h"
-  ]
+  s.public_header_files    = "react/featureflags/*.{h,hpp}"
   
   s.compiler_flags         = folly_compiler_flags
 
@@ -61,14 +49,6 @@ Pod::Spec.new do |s|
   # Framework 支持配置
   if ENV['USE_FRAMEWORKS']
     s.module_name            = "React_featureflags"
-    s.header_mappings_dir    = "."
-    s.module_map             = "module.modulemap"
-    
-    # 确保framework模式下正确暴露头文件
-    s.pod_target_xcconfig.merge!({
-      "DEFINES_MODULE" => "YES",
-      "SWIFT_INSTALL_OBJC_HEADER" => "NO"
-    })
+    s.header_mappings_dir  = "react/featureflags"
   end
-
 end
