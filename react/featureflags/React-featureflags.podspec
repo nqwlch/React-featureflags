@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   s.author                 = "Meta Platforms, Inc. and its affiliates"
   s.platforms = { :ios => '15.1' }
   s.source                 = source
-  s.source_files           = "react/featureflags/*.{cpp,h}"
+  s.source_files           = "*.{cpp,h}"
   s.compiler_flags         = folly_compiler_flags
   s.header_dir             = "react/featureflags"
   s.pod_target_xcconfig    = { "CLANG_CXX_LANGUAGE_STANDARD" => "c++20",
