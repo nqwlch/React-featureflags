@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
   s.header_dir             = "react/featureflags"
   s.pod_target_xcconfig    = { "CLANG_CXX_LANGUAGE_STANDARD" => "c++20",
                                "HEADER_SEARCH_PATHS" => header_search_paths.join(' '),
-                               "DEFINES_MODULE" => "YES" }
+                               }
 
   s.dependency "RCT-Folly", folly_version
 
