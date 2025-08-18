@@ -18,11 +18,6 @@ else
 end
 
 
-header_search_paths = []
-
-if ENV['USE_FRAMEWORKS']
-  header_search_paths << "\"$(PODS_TARGET_SRCROOT)/../..\"" # this is needed to allow the feature flags access its own files
-end
 
 folly_compiler_flags = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -DFOLLY_HAVE_CLOCK_GETTIME=1 -Wno-comma -Wno-shorten-64-to-32"
 folly_version = "2024.11.18.00"
@@ -36,17 +31,17 @@ Pod::Spec.new do |s|
   s.author                 = "Meta Platforms, Inc. and its affiliates"
   s.platforms = { :ios => '15.1' }
   s.source                 = source
-  s.source_files           = "*.{cpp,h}"
   s.compiler_flags         = folly_compiler_flags
-  s.header_dir             = "react/featureflags"
-  s.pod_target_xcconfig    = { "CLANG_CXX_LANGUAGE_STANDARD" => "c++20",
-                               "HEADER_SEARCH_PATHS" => header_search_paths.join(' '),
+  s.pod_target_xcconfig    = { "CLANG_CXX_LANGUAGE_STANDARD" => "c++20"
                                }
 
   s.dependency "RCT-Folly", folly_version
 
+  s.public_header_files = "react/featureflags/*.h"
+  s.source_files = ["react/featureflags/*.h", "react/featureflags/*.cc"]
+
   if ENV['USE_FRAMEWORKS']
     s.module_name            = "React_featureflags"
-    s.header_mappings_dir  = "../.."
+    s.header_mappings_dir = "react"
   end
 end
