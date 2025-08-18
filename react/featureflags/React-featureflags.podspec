@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
   s.homepage               = "https://reactnative.dev/"
   s.license                = "MIT"
   s.author                 = "Meta Platforms, Inc. and its affiliates"
-  s.platforms              = "15.1"
+  s.platforms = { :ios => '15.1' }
   s.source                 = source
   s.source_files           = "*.{cpp,h}"
   s.compiler_flags         = folly_compiler_flags

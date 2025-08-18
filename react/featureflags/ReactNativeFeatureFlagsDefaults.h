@@ -19,7 +19,7 @@
 
 #pragma once
 
-#include  <ReactFeatureflags/ReactNativeFeatureFlagsProvider.h>
+#include "ReactNativeFeatureFlagsProvider.h"
 
 namespace facebook::react {
 
